@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Ass5</title>
+</head>
+<body>
+    <script>
+        let year =2022;
+        let n=prompt("How many leap years would you like to print")
+       let count = 0;
+       while(count!=n){
+        year = year+1;
+        if((year%400==0)||(year%4==0 && year%100!=0)){
+            count++;
+            console.log("Leap years are: "+year);    
+        }
+    }
+    </script>
+</body>
+</html>
