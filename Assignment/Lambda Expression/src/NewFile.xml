@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+<bean id="officeAddress" class="com.spring.exp.Address">
+        <property name="number" value = "101" />
+        <property name="street" value = "#{'M I Road'}" />
+        <property name="city" value = "Jaipur" />
+        <property name="state" value = "Rajasthan" />
+        <property name="pinCode" value = "#{'302001'}" />
+    </bean>
+    
+    <bean id="employee" class="com.spring.exp.Employee">
+        <property name="empId" value = "1001" />
+        <property name="empName" value = "Ram" />
+        <!--  Bean reference through SpEL -->
+        <property name="officeAddress" value = "#{officeAddress}" />
+        <property name="officeLocation" value = "#{officeAddress.city}" />
+        <!--  Method invocation through SpEL -->
+        <property name="employeeInfo" value = "#{officeAddress.getAddress('Ram')}" />
+    </bean>
+
+
+
+</beans>

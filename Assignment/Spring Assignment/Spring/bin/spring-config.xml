@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+<bean id="myCollection" class="com.capgemini.spring.MyCollection">
+
+	<property name="myList">
+	  <list>
+	       <value>List Value A</value>
+	       <value>List Value B</value>
+	  </list>
+      </property>
+      
+      <property name="mySet">
+          <set>
+            <value>Set Value A</value>
+            <value>Set Value B</value>
+          </set>
+      </property> 
+      
+      <property name="myMap">
+	 <map>
+            <entry key="0" value="Map Value A"/>           
+            <entry key="1" value="Map Value B"/>
+         </map>
+      </property> 
+	</bean> 
+
+
+
+</beans>
